@@ -6,56 +6,107 @@
   <meta name="description" content="Consultoria em riscos digitais, segurança da informação e LGPD para pequenas e médias empresas.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --bg: #020617;
+      --card: #020617;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #22c55e;
+      --line: #1e293b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-      background-color: #0f172a;
-      color: #e5e7eb;
-      line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top, #020617, #000);
+      color: var(--text);
+      line-height: 1.7;
     }
+
     header {
-      padding: 60px 20px;
+      padding: 100px 20px 80px;
       text-align: center;
-      background: linear-gradient(135deg, #020617, #0f172a);
-    }
-    header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 0 auto 30px;
-      color: #cbd5f5;
-    }
-    .cta {
-      display: inline-block;
-      background-color: #22c55e;
-      color: #020617;
-      padding: 15px 25px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-    }
-    section {
-      padding: 60px 20px;
       max-width: 900px;
       margin: auto;
     }
-    h2 {
-      color: #38bdf8;
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
       margin-bottom: 15px;
     }
-    ul {
-      padding-left: 20px;
+
+    header p {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto 40px;
     }
+
+    .cta {
+      display: inline-block;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #020617;
+      padding: 16px 30px;
+      font-weight: 700;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: transform .2s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--line);
+      padding: 30px;
+      border-radius: 14px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
     footer {
-      background-color: #020617;
+      border-top: 1px solid var(--line);
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px;
       font-size: 0.9rem;
-      color: #94a3b8;
+      color: var(--muted);
     }
   </style>
 </head>
@@ -75,45 +126,59 @@
 
 <section>
   <h2>O problema</h2>
-  <p>
-    A maioria das empresas não sabe onde estão seus reais riscos digitais.
-    Falhas de segurança, uso inadequado de dados e ausência de controles básicos
-    podem gerar vazamentos, prejuízos financeiros e problemas legais.
+  <p class="subtitle">
+    A maioria das empresas opera com riscos invisíveis: acessos sem controle, backups não testados,
+    uso inadequado de dados e comunicação sem segurança.
   </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Vazamentos</h3>
+      <p>Dados expostos por falhas simples e negligenciadas.</p>
+    </div>
+    <div class="card">
+      <h3>Prejuízo financeiro</h3>
+      <p>Paradas, golpes e perda de confiança do cliente.</p>
+    </div>
+    <div class="card">
+      <h3>Risco legal</h3>
+      <p>Exposição à LGPD e problemas jurídicos evitáveis.</p>
+    </div>
+  </div>
 </section>
 
 <section>
   <h2>Como ajudamos</h2>
-  <ul>
-    <li>Identificação de riscos críticos de segurança e LGPD</li>
-    <li>Análise objetiva, sem jargões técnicos</li>
-    <li>Relatório claro com prioridades reais</li>
-    <li>Orientação focada em reduzir risco e impacto no negócio</li>
-  </ul>
+  <p class="subtitle">
+    Atuamos de forma objetiva, sem jargões técnicos e sem empurrar ferramentas.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Raio-X de Riscos</h3>
+      <p>Identificamos onde estão os riscos críticos do seu ambiente digital.</p>
+    </div>
+    <div class="card">
+      <h3>Prioridade real</h3>
+      <p>Você sabe o que corrigir agora e o que pode esperar.</p>
+    </div>
+    <div class="card">
+      <h3>Decisão consciente</h3>
+      <p>Menos achismo, mais clareza para o negócio.</p>
+    </div>
+  </div>
 </section>
 
 <section>
   <h2>Serviço principal</h2>
-  <p>
-    <strong>Raio-X de Riscos Digitais & LGPD</strong><br><br>
-    Uma análise completa do cenário digital da empresa para identificar falhas de segurança,
-    exposição à LGPD e riscos operacionais, com recomendações práticas e priorizadas.
+  <p class="subtitle">
+    <strong>Raio-X de Riscos Digitais & LGPD</strong><br>
+    Análise completa do cenário digital da empresa, com relatório claro e recomendações práticas.
   </p>
 </section>
 
-<section>
-  <h2>Por que a PHP Risk & Security</h2>
-  <ul>
-    <li>Foco em risco, não em ferramenta</li>
-    <li>Visão técnica e de negócio</li>
-    <li>Independência de fornecedores</li>
-    <li>Atuação objetiva e responsável</li>
-  </ul>
-</section>
-
 <footer>
-  © 2026 - PHP Risk & Security<br>
-  Consultoria em Riscos Digitais, Segurança da Informação e LGPD
+  © 2026 - PHP Risk & Security · Riscos Digitais, Segurança da Informação e LGPD
 </footer>
 
 </body>
